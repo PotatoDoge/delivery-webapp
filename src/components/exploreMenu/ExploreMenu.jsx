@@ -20,7 +20,6 @@ const ExploreMenu = ({category, setCategory}) => {
                 })}
             </div>
             <hr />
-            <p>{category}</p>
         </div>
     )
 }
