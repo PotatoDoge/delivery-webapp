@@ -50,25 +50,25 @@ const Cart = () => {
                         </div>
                         <div className="cart-total-details">
                             <p>Delivery Fee</p>
-                            <p>${2}</p>
+                            <p>${getTotalCartAmount() === 0 ? 0 : 2}</p>
                         </div>
                         <div className="cart-total-details">
                             <b>Total</b>
-                            <b>${getTotalCartAmount()+2}</b>
+                            <b>${getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2}</b>
                         </div>
                     </div>
                     <button onClick={() => navigate('/order')}>PROCEED TO CHECKOUT</button>
                 </div>
-                    <div className="cart-promocode">
-                        <div>
-                            <p>If you have a promo code, enter it here</p>
-                            <div className="cart-promocode-input">
-                                <input type="text" placeholder="Promo code"/>
-                                <button>Submit</button>
-                            </div>
+                <div className="cart-promocode">
+                    <div>
+                        <p>If you have a promo code, enter it here</p>
+                        <div className="cart-promocode-input">
+                            <input type="text" placeholder="Promo code"/>
+                            <button>Submit</button>
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
     )
 }
